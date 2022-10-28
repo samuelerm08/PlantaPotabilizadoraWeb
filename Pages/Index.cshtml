@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+<table class="table">
+
+    <thead>
+
+        <tr>
+
+            <th scope="col">Encargado</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @{
+            foreach (var item in Model.Lista.Show())
+            {
+                <tr>
+                    <td>
+                        <a href="Detalle?encargado=@item.encargado" style="text-decoration: none">@item.encargado</a>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

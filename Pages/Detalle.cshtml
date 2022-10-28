@@ -1,0 +1,34 @@
+﻿@page
+@model Aplicacion_Desintoxicacion.Pages.DetalleModel
+<table class="table">
+    <thead>
+        <tr>            
+            <th scope="col">Nombre</th>
+            <th scope="col">Temperatura Ebullición</th>
+            <th scope="col">Tiempo Implementación</th>
+            <th scope="col">Costo Inicial</th>
+            <th scope="col">Costo Final</th>
+            <th scope="col">Porcentaje de Azufre</th>
+            <th scope="col">Índice Verificador</th>
+            <th scope="col">Estado</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+
+        <tr>            
+
+            <td>@Model.alternativa?.encargado</td>
+            <td>@Model.alternativa?.tempEbullicion</td>
+            <td>@Model.alternativa?.tiempoImplementacion</td>
+            <td>@Model.alternativa?.costoInicial</td>
+            <td>@Model.alternativa?.costoFinal</td>  
+            <td>@Model.alternativa?.porcentajeAzufre</td>
+            <td>@Model.alternativa?.Total()</td>         
+            <td>@((Model.Estado)Model.alternativa.Est())</td>
+             
+        </tr>
+
+    </tbody>
+
+</table>
